@@ -1,0 +1,5 @@
+django
+pydantic
+pydantic-django
+pytest
+pytest-django

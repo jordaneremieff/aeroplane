@@ -26,9 +26,3 @@ app.add_middleware(
 )
 app.include_router(router, prefix="/api")
 app.mount("/dj", get_asgi_application())
-
-
-if __name__ == "__main__":
-    from django.core.management import execute_from_command_line
-
-    execute_from_command_line(sys.argv)

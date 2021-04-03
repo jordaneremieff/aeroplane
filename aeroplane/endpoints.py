@@ -4,13 +4,13 @@ from datetime import datetime
 from fastapi import APIRouter
 
 from aeroplane.models import Page
-from aeroplane.schemas import PageSchema, PageRevisionSchema
+from aeroplane.schemas import PageSchema, PageCreateUpdateSchema
 
 router = APIRouter()
 
 
 @router.post("/pages", response_model=PageSchema)
-def create_page(page: PageRevisionSchema):
+def create_page(page: PageCreateUpdateSchema):
     page = Page.objects.create(**page.dict())
 
     return PageSchema.from_django(page)
@@ -22,13 +22,13 @@ def list_pages():
 
 
 @router.put("/pages/{id}", response_model=PageSchema)
-def update_page(id: int, page_data: PageRevisionSchema):
+def update_page(id: int, page_data: PageCreateUpdateSchema):
     page = Page.objects.get(id=id)
 
     # Save the content fields for the current page to the revision history
-    revision_schema = PageRevisionSchema.from_django(page)
+    schema = PageCreateUpdateSchema.from_django(page)
     timestamp = str(datetime.now().timestamp())
-    page.revisions[timestamp] = revision_schema.dict()
+    page.revisions[timestamp] = schema.dict()
 
     # Update the page object with the new data
     for k, v in page_data.dict().items():

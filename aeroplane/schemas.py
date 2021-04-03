@@ -5,7 +5,7 @@ from pydantic_django import ModelSchema
 from aeroplane.models import Page
 
 
-class PageRevisionSchema(ModelSchema):
+class PageCreateUpdateSchema(ModelSchema):
 
     slug: Optional[str] = None
 

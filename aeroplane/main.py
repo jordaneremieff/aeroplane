@@ -1,13 +1,12 @@
 import os
-import sys
 
 from django.conf import settings
 from django.apps import apps
 from django.core.asgi import get_asgi_application
 
-
 from fastapi import FastAPI
 from starlette.middleware.cors import CORSMiddleware
+from mangum import Mangum
 
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "aeroplane.settings")
 apps.populate(settings.INSTALLED_APPS)
@@ -26,3 +25,5 @@ app.add_middleware(
 )
 app.include_router(router, prefix="/api")
 app.mount("/dj", get_asgi_application())
+
+handler = Mangum(app)

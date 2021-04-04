@@ -1,0 +1,34 @@
+service: aeroplane
+
+frameworkVersion: '2'
+
+provider:
+  name: aws
+  runtime: python3.8
+  lambdaHashingVersion: 20201221
+  stage: dev
+  region: ap-southeast-1
+  logs:
+    httpApi: true
+
+custom:
+  pythonRequirements:
+    dockerizePip: non-linux
+    slim: true
+
+package:
+  exclude:
+    - node_modules/**
+    - .venv/**
+    - .direnv/**
+    - .idea/**
+
+functions:
+  app:
+    handler: aeroplane.main.handler
+    events:
+      - httpApi:
+          path: '*'
+
+plugins:
+  - serverless-python-requirements

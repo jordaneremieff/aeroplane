@@ -129,3 +129,5 @@ dmypy.json
 .pyre/
 
 .idea
+.serverless
+node_modules

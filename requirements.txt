@@ -3,3 +3,7 @@ pydantic
 pydantic-django
 pytest
 pytest-django
+mangum
+fastapi
+psycopg2-binary
+python-dotenv

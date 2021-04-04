@@ -2,7 +2,7 @@
 
 An experiment combining [Django](https://www.djangoproject.com/), [Pydantic-Django](https://github.com/jordaneremieff/pydantic-django), and [FastAPI](https://fastapi.tiangolo.com/).
 
-<img width="420" alt="Screen Shot 2021-04-04 at 1 21 41 am" src="https://user-images.githubusercontent.com/1376648/113481348-b54b5700-94e4-11eb-8eb8-988d4cfc5020.png"> <img width="420" alt="Screen Shot 2021-04-04 at 1 22 07 am" src="https://user-images.githubusercontent.com/1376648/113481353-cbf1ae00-94e4-11eb-90b2-75d8b3ca7b6c.png">
+<img width="400" alt="Screen Shot 2021-04-04 at 1 21 41 am" src="https://user-images.githubusercontent.com/1376648/113481348-b54b5700-94e4-11eb-8eb8-988d4cfc5020.png"> <img width="400" alt="Screen Shot 2021-04-04 at 1 22 07 am" src="https://user-images.githubusercontent.com/1376648/113481353-cbf1ae00-94e4-11eb-90b2-75d8b3ca7b6c.png">
 
 ## Initial setup
 
@@ -22,7 +22,7 @@ Any supported Django database configuration can be used, this example provides t
 
 - To use Postgres, rename `.env.dist` to `.env` and set the details for the database. These will be loaded in `settings.py`.
 
-- To use SQLite, then edit `settings.py` to uncomment the sqlite3 database configuration.
+- To use SQLite, edit `settings.py` to uncomment the sqlite3 database configuration.
 
 Then populate the initial database tables using the migration command:
 

@@ -1,9 +1,13 @@
 django
 pydantic
-pydantic-django
+fastapi
+djantic
 pytest
 pytest-django
-mangum
-fastapi
-psycopg2-binary
 python-dotenv
+
+# Only required for serverless deployment
+mangum
+
+# Only required if using Postgres
+psycopg2-binary

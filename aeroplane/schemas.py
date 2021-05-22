@@ -1,6 +1,6 @@
 from typing import Optional
 
-from pydantic_django import ModelSchema
+from djantic import ModelSchema
 
 from aeroplane.models import Page
 

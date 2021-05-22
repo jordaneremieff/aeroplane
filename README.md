@@ -1,6 +1,6 @@
 # aeroplane
 
-An experiment combining [Django](https://www.djangoproject.com/), [Pydantic-Django](https://github.com/jordaneremieff/pydantic-django), and [FastAPI](https://fastapi.tiangolo.com/).
+An experiment combining [Django](https://www.djangoproject.com/) and [FastAPI](https://fastapi.tiangolo.com/). Also includes [Djantic](https://github.com/jordaneremieff/djantic) for converting Django models to Pydantic models and an example serverless configuration.
 
 <img width="420" alt="Screen Shot 2021-04-04 at 1 21 41 am" src="https://user-images.githubusercontent.com/1376648/113481348-b54b5700-94e4-11eb-8eb8-988d4cfc5020.png"> <img width="420" alt="Screen Shot 2021-04-04 at 1 22 07 am" src="https://user-images.githubusercontent.com/1376648/113481353-cbf1ae00-94e4-11eb-90b2-75d8b3ca7b6c.png">
 

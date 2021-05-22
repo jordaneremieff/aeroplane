@@ -2,9 +2,14 @@
 
 An experiment combining [Django](https://www.djangoproject.com/) and [FastAPI](https://fastapi.tiangolo.com/). Also includes [Djantic](https://github.com/jordaneremieff/djantic) for converting Django models to Pydantic models and an example serverless configuration.
 
-<img width="420" alt="Screen Shot 2021-04-04 at 1 21 41 am" src="https://user-images.githubusercontent.com/1376648/113481348-b54b5700-94e4-11eb-8eb8-988d4cfc5020.png"> <img width="420" alt="Screen Shot 2021-04-04 at 1 22 07 am" src="https://user-images.githubusercontent.com/1376648/113481353-cbf1ae00-94e4-11eb-90b2-75d8b3ca7b6c.png">
+<p align="center">
+<kbd><img width="200" alt="Screen Shot 2021-04-04 at 3 48 27 pm" src="https://user-images.githubusercontent.com/1376648/113499971-c97f6a80-955d-11eb-99b0-a81ea2344ac1.png"></kbd>
+<kbd><img width="200" alt="Screen Shot 2021-04-04 at 3 47 54 pm" src="https://user-images.githubusercontent.com/1376648/113499972-cab09780-955d-11eb-9aee-3b4bad6cba08.png"></kbd>
+</p>
 
 ## Initial setup
+
+***Requirements***: Python 3.7+
 
 First create a virtual environment and install the dependencies:
 
@@ -22,7 +27,7 @@ Any supported Django database configuration can be used, this example provides t
 
 - To use Postgres, rename `.env.dist` to `.env` and set the details for the database. These will be loaded in `settings.py`.
 
-- To use SQLite, then edit `settings.py` to uncomment the sqlite3 database configuration.
+- To use SQLite, edit `settings.py` to uncomment the sqlite3 database configuration.
 
 Then populate the initial database tables using the migration command:
 

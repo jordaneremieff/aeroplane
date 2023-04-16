@@ -5,7 +5,7 @@ djantic
 pytest
 pytest-django
 python-dotenv
-
+uvicorn
 # Only required for serverless deployment
 mangum
 

@@ -14,7 +14,7 @@ An experiment combining [Django](https://www.djangoproject.com/) and [FastAPI](h
 First create a virtual environment and install the dependencies:
 
 ```shell
-python -m .venv venv
+python -m venv .venv
 . .venv/bin/activate
 pip install -r requirements.txt
 ```
@@ -37,15 +37,21 @@ Then populate the initial database tables using the migration command:
 
 ## Running the application locally
 
+(Don't forget to) Create a Superuser:
+```shell
+./manage.py createsuperuser
+```
+
 Run the server locally using `uvicorn`:
 
 ```shell
-uvicorn aeroplane.main:app --debug
+uvicorn aeroplane.main:app
 ```
 
-The [auto-generated docs](https://fastapi.tiangolo.com/features/#automatic-docs) proivded by FastAPI are available at http://localhost:8000/docs
+The [model admin](https://docs.djangoproject.com/en/4.2/ref/contrib/admin/) provided by Django is availabe at http://localhost:8000/dj/admin
 
-The [model admin](https://docs.djangoproject.com/en/3.1/ref/contrib/admin/) provided by Django is availabe at http://localhost:8000/dj/admin
+
+The [auto-generated docs](https://fastapi.tiangolo.com/features/#automatic-docs) provided by FastAPI are available at http://localhost:8000/docs
 
 ## Deploying to AWS Lambda & API Gateway
 
